@@ -441,17 +441,24 @@
     padding: 4px 10px;
     border-radius: 2px;
   }
-  
- #Ofertas {
+
+#Ofertas {
   background: var(--white);
   padding: 60px 20px;
-  text-align: center;
+  text-align: center; /* mantiene centrado el banner */
+}
+
+/* 🔥 CONTENEDOR DE TEXTOS (corrige alineación) */
+.fade-up {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left; /* 👈 esto alinea el texto a la izquierda */
 }
 
 /* Contenedor del banner */
 .oferta-banner {
   width: 100%;
-  max-width: 1100px;   /* controla el tamaño máximo */
+  max-width: 1100px;
   margin: 40px auto 0;
 }
 
@@ -462,6 +469,12 @@
   display: block;
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* OPCIONAL: pequeño detalle para el label */
+.section-label {
+  display: block;
+  margin-bottom: 5px;
 }
   /* ---- ESLOGAN ---- */
   #eslogan {
