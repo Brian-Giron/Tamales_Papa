@@ -363,13 +363,19 @@
     gap: 24px;
     margin-top: 50px;
   }
-  .product-card {
-    background: var(--cream);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
-    box-shadow: 0 2px 12px rgba(59,32,8,0.06);
-  }
+ .product-img {
+  width: 100%;
+  height: 200px; /* ajusta si quieres más grande */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-producto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* llena el espacio (puede recortar un poco) */
+  display: block;
+}
   .product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(59,32,8,0.12); }
   .product-img {
     height: 200px;
@@ -779,37 +785,49 @@
   </div>
 
   <div class="products-grid fade-up">
-    <div class="product-card">
-      <div class="product-img p1"><span style="position:relative;z-index:1;">🫔</span></div>
-      <div class="product-info">
-        <h3 class="product-name">Tamal de Rajas</h3>
-        <p class="product-desc">Relleno con rajas de chile poblano y queso fresco, envuelto en nuestra masa de papa especiada.</p>
-        <span class="product-tag">Vegetariano</span>
-      </div>
+
+  <div class="product-card">
+    <div class="product-img">
+      <img src="Galeria/tamal_rajas.jpg" class="img-producto">
     </div>
-    <div class="product-card">
-      <div class="product-img p2"><span style="position:relative;z-index:1;">🍗</span></div>
-      <div class="product-info">
-        <h3 class="product-name">Tamal de Pollo</h3>
-        <p class="product-desc">Pollo guisado en salsa verde o roja con nuestra inconfundible masa de papa tradicional.</p>
-        <span class="product-tag">El más pedido</span>
-      </div>
+    <div class="product-info">
+      <h3 class="product-name">Tamal de rajas</h3>
+      <p class="product-desc">Relleno con rajas de chile poblano y queso fresco, envuelto en nuestra masa de papa especiada.</p>
+      <span class="product-tag">vegetariano</span>
     </div>
-    <div class="product-card">
-      <div class="product-img p3"><span style="position:relative;z-index:1;">🌶️</span></div>
-      <div class="product-info">
-        <h3 class="product-name">Tamal de Mole</h3>
-        <p class="product-desc">Relleno de pavo en mole negro, una combinación clásica y profunda que enamora al paladar.</p>
-        <span class="product-tag">Especial</span>
-      </div>
+  </div>
+    
+
+  <div class="product-card">
+    <div class="product-img">
+      <img src="Galeria/tamal_pollo.jpg" class="img-producto">
     </div>
-    <div class="product-card">
-      <div class="product-img p4"><span style="position:relative;z-index:1;">🍓</span></div>
-      <div class="product-info">
-        <h3 class="product-name">Tamal de chipilin</h3>
-        <p class="product-desc">Masa de papa con hoja de chipilin</p>
-        <span class="product-tag">clasico</span>
-      </div>
+    <div class="product-info">
+      <h3 class="product-name">Tamal de pollo</h3>
+      <p class="product-desc">Pollo guisado en salsa verde o roja con nuestra inconfundible masa de papa tradicional.</p>
+      <span class="product-tag">El mas pedido</span>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img">
+      <img src="Galeria/tamal_mole.jpg" class="img-producto">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Tamal de mole</h3>
+      <p class="product-desc">Relleno de pollo en mole negro, una combinación clásica y profunda que enamora al paladar.</p>
+      <span class="product-tag">Especial</span>
+    </div>
+  </div>
+    
+  <div class="product-card">
+    <div class="product-img">
+      <img src="Galeria/tamal_chipilin.jpg" class="img-producto">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Tamal de chipilín</h3>
+      <p class="product-desc">Masa de papa con hoja de chipilín</p>
+      <span class="product-tag">clásico</span>
     </div>
   </div>
 </section>
@@ -877,7 +895,7 @@
       <span class="social-name">Instagram</span>
       <span class="social-handle">@tamales_la_abuela_</span>
     </a>
-    <a href="https://facebook.com/TU_PAGINA" class="social-card" target="_blank" rel="noopener">
+    <a href="https://www.facebook.com/share/18bbK1SUDn/" class="social-card" target="_blank" rel="noopener">
       <span class="social-icon">📘</span>
       <span class="social-name">Facebook</span>
       <span class="social-handle">/TuPagina</span>
