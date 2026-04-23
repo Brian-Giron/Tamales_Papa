@@ -441,7 +441,28 @@
     padding: 4px 10px;
     border-radius: 2px;
   }
+  
+ #Ofertas {
+  background: var(--white);
+  padding: 60px 20px;
+  text-align: center;
+}
 
+/* Contenedor del banner */
+.oferta-banner {
+  width: 100%;
+  max-width: 1100px;   /* controla el tamaño máximo */
+  margin: 40px auto 0;
+}
+
+/* Imagen del banner */
+.img-oferta {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
   /* ---- ESLOGAN ---- */
   #eslogan {
     background: linear-gradient(160deg, #4A6741 0%, #3D5C35 100%);
@@ -625,6 +646,7 @@
     <li><a href="#galeria">Galería</a></li>
     <li><a href="#video">Video</a></li>
     <li><a href="#productos">Variedades</a></li>
+    <li><a href="#Ofertas">Ofertas</a></li>
     <li><a href="#redes">Redes</a></li>
     <li><a href="#pedidos" class="nav-cta">📱 Pedir ahora</a></li>
   </ul>
@@ -865,16 +887,18 @@
       <span class="product-tag">clásico</span>
     </div>
   </div>
+</section>
 
- <div class="product-card">
-    <div class="product-img">
-      <img src="Galeria/Promociones_semanales.jpg" class="img-producto">
-    </div>
-    <div class="product-info">
-      <h3 class="product-name">Promociones semanales.</h3>
-      <p class="product-desc">ven por las super ofertas </P>
-      <span class="product-tag">Variedad</span>
-    </div>
+<section id="Ofertas">
+  <div class="fade-up">
+    <p class="section-label">Ofertas</p>
+    <h2 class="section-title">Elige tu oferta preferida</h2>
+    <div class="divider"></div>
+    <p class="section-desc">Ofrecemos variedad en nuestras ofertas semanales.</p>
+  </div>
+
+  <div class="oferta-banner">
+    <img src="Galeria/Promociones_semanales.jpg" class="img-oferta">
   </div>
 </section>
 
