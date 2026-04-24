@@ -274,58 +274,64 @@
   }
 
   /* ---- GALERIA ---- */
-  #galeria { background: var(--cream); }
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 44px;
-  }
-  .gallery-card {
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, #8B5E3C, #4A6741);
-    display: flex; align-items: center; justify-content: center;
-    transition: transform 0.3s;
-  }
-  .gallery-card:hover { transform: scale(1.02); }
-  .gallery-card.tall { grid-row: span 2; aspect-ratio: auto; }
+ #galeria { background: var(--white); }
 
-  .gallery-card-inner {
-    width: 100%; height: 100%; min-height: 200px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 8px;
-    padding: 20px;
-  }
-  .gallery-icon { font-size: 3rem; }
-  .gallery-label {
-    font-family: 'Playfair Display', serif;
-    color: rgba(255,255,255,0.9);
-    font-size: 0.9rem;
-    text-align: center;
-    font-style: italic;
-  }
-  .gallery-card:nth-child(1) { background: linear-gradient(135deg, #7A4A28, #A0622A); }
-  .gallery-card:nth-child(2) { background: linear-gradient(135deg, #3D5C35, #5A8050); }
-  .gallery-card:nth-child(3) { background: linear-gradient(135deg, #8B4513, #C4722A); }
-  .gallery-card:nth-child(4) { background: linear-gradient(135deg, #4A6741, #7A9A72); }
-  .gallery-card:nth-child(5) { background: linear-gradient(135deg, #6B3F1E, #9A6A40); }
-  .gallery-card:nth-child(6) { background: linear-gradient(135deg, #5C3D22, #8B6040); }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
 
-  /* Instrucciones para reemplazar imágenes */
-  .gallery-tip {
-    background: rgba(200,131,42,0.1);
-    border: 1px dashed var(--gold);
-    border-radius: 6px;
-    padding: 14px 20px;
-    margin-top: 20px;
-    color: var(--text-mid);
-    font-size: 0.85rem;
-    display: flex; align-items: center; gap: 10px;
-  }
+/* Tarjeta */
+.gallery-card {
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(59,32,8,0.12);
+}
+
+/* Contenedor imagen */
+.gallery-img {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Imagen */
+.img-galeria {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 🔥 no recorta */
+}
+
+/* Efecto decorativo igual que productos */
+.gallery-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.05'%3E%3Cpath d='M15 0L30 15L15 30L0 15z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Info */
+.gallery-info {
+  padding: 18px;
+  text-align: center;
+}
+
+.gallery-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--deep-brown);
+  margin: 0;
+}
 
   /* ---- VIDEO ---- */
   #video { background: var(--deep-brown); }
@@ -840,48 +846,48 @@
     <p class="section-desc">Un vistazo a nuestra cocina artesanal y los productos que preparamos con tanto esmero.</p>
   </div>
 
-  <div class="gallery-grid fade-up">
-    <div class="gallery-card tall">
-      <div class="gallery-card-inner">
-        <span class="gallery-icon">🫔</span>
-        <span class="gallery-label">Tamales recién salidos</span>
+  <div class="gallery-card">
+      <div class="gallery-img">
+        <img src="Galeria/Tamales_recien_salidos-.jpg" class="img-galeria">
       </div>
-    </div>
-    <div class="gallery-card">
-      <div class="gallery-card-inner">
-        <span class="gallery-icon">🥔</span>
-        <span class="gallery-label">Masa de papa fresca</span>
+      <div class="gallery-info">
+        <h3 class="gallery-name">Tamales recién en la olla</h3>
       </div>
-    </div>
-    <div class="gallery-card">
-      <div class="gallery-card-inner">
-        <span class="gallery-icon">🌽</span>
-        <span class="gallery-label">Proceso artesanal</span>
-      </div>
-    </div>
-    <div class="gallery-card">
-      <div class="gallery-card-inner">
-        <span class="gallery-icon">🍃</span>
-        <span class="gallery-label">Ingredientes naturales</span>
-      </div>
-    </div>
-    <div class="gallery-card">
-      <div class="gallery-card-inner">
-        <span class="gallery-icon">🔥</span>
-        <span class="gallery-label">Cocción tradicional</span>
-      </div>
-    </div>
-    <div class="gallery-card">
-      <div class="gallery-card-inner">
-        <span class="gallery-icon">📦</span>
-        <span class="gallery-label">Listos para entregar</span>
-      </div>
-    </div>
   </div>
 
-  <div class="gallery-tip fade-up">
-    <span>💡</span>
-    <span><strong>Para personalizar:</strong> Reemplaza cada tarjeta con tus propias fotos cambiando el fondo por <code>&lt;img src="tu-foto.jpg"&gt;</code> dentro de cada <code>.gallery-card</code></span>
+  <div class="gallery-card">
+      <div class="gallery-img">
+        <img src="Galeria/Masa_papa.jpg" class="img-galeria">
+      </div>
+      <div class="gallery-info">
+        <h3 class="gallery-name">Masa de papa fresca</h3>
+      </div>
+  </div>
+  <div class="gallery-card">
+      <div class="gallery-img">
+        <img src="Galeria/Ingredientes_naturales.jpg" class="img-galeria">
+      </div>
+      <div class="gallery-info">
+        <h3 class="gallery-name">Ingredientes naturales</h3>
+      </div>
+  </div>
+
+  <div class="gallery-card">
+      <div class="gallery-img">
+        <img src="Galeria/coccion_tradicional.jpg" class="img-galeria">
+      </div>
+      <div class="gallery-info">
+        <h3 class="gallery-name">Cocción tradicional</h3>
+      </div>
+  </div>
+
+  <div class="gallery-card">
+      <div class="gallery-img">
+        <img src="Galeria/Entrega_tamales (1).jpg" class="img-galeria">
+      </div>
+      <div class="gallery-info">
+        <h3 class="gallery-name">Listos para entregar</h3>
+      </div>
   </div>
 </section>
 
