@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>La Tamalería de la Abuela — Tamales de Masa de Papa</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -441,7 +442,7 @@
     padding: 4px 10px;
     border-radius: 2px;
   }
-
+/* ---- OFERTAS ---- */
 #Ofertas {
   background: var(--white);
   padding: 60px 20px;
@@ -475,6 +476,72 @@
 .section-label {
   display: block;
   margin-bottom: 5px;
+}
+
+/* ---- REGISTRO COMPRAS ---- */
+.fidelidad-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.btn-registro {
+  display: inline-block;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #d88c2d, #b96b1f); /* dorado/naranja */
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.btn-registro:hover {
+  background: linear-gradient(135deg, #b96b1f, #8a4d14);
+  transform: translateY(-2px);
+}
+
+/* TEXTO */
+.promo-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.promo-label {
+  font-size: 0.85rem;
+  color: #b96b1f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.promo-title {
+  font-size: 1.8rem;
+  color: #4a2c14;
+  margin: 10px 0;
+}
+
+.promo-desc {
+  color: #5c4a3a;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* IMAGEN */
+.promo-img {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.promo-img img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
   /* ---- ESLOGAN ---- */
   #eslogan {
@@ -915,6 +982,31 @@
   </div>
 </section>
 
+
+<section class="fidelidad-section">
+  <div class="promo-text">
+    <p class="promo-label">Programa de fidelidad</p>
+    
+    <h3 class="promo-title">
+      Disfruta más, gana más
+    </h3>
+    
+    <p class="promo-desc">
+      Cada compra suma. Registra tus visitas y al completar 10,
+      recibe un <strong>tamal gratis</strong> 🎉
+    </p>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1n4FuYpVgtwsxhLJqRgK-wbtbjwud34XBqrd2Jhb7TmMF6w/viewform?usp=header" target="_blank" class="btn-registro">
+      Registrar compra
+    </a>
+  </div>
+
+  <div class="promo-img">
+    <img src="Galeria/Tarjeta_fidelizacion.jpg" alt="Tarjeta de fidelidad">
+  </div>
+
+</section>
+
 <!-- PEDIDOS WHATSAPP -->
 <section id="pedidos">
   <div class="fade-up">
@@ -968,37 +1060,37 @@
     <p class="section-label">Síguenos</p>
     <h2 class="section-title">Nuestras Redes</h2>
     <div class="divider"></div>
-    <p class="section-desc">Mantente al tanto de novedades, promociones y el día a día de nuestra tamalería.</p>
+    <p class="section-desc">
+      Mantente al tanto de novedades, promociones y el día a día de nuestra tamalería.
+    </p>
   </div>
 
   <div class="social-grid fade-up">
-    <!-- Cambia los href por tus URLs reales -->
+
+    <!-- Instagram -->
     <a href="https://www.instagram.com/tamales_la_abuela_" class="social-card" target="_blank" rel="noopener">
-      <span class="social-icon">📸</span>
+      <span class="social-icon">
+        <i class="fa-brands fa-instagram"></i>
+      </span>
       <span class="social-name">Instagram</span>
       <span class="social-handle">@tamales_la_abuela_</span>
     </a>
+
+    <!-- Facebook -->
     <a href="https://www.facebook.com/share/18bbK1SUDn/" class="social-card" target="_blank" rel="noopener">
-      <span class="social-icon">📘</span>
+      <span class="social-icon">
+        <i class="fa-brands fa-facebook-f"></i>
+      </span>
       <span class="social-name">Facebook</span>
       <span class="social-handle">/TuPagina</span>
     </a>
-    <a href="https://tiktok.com/@TU_USUARIO" class="social-card" target="_blank" rel="noopener">
-      <span class="social-icon">🎵</span>
-      <span class="social-name">TikTok</span>
-      <span class="social-handle">@TuUsuario</span>
-    </a>
-    <a href="https://wa.me/521XXXXXXXXXX" class="social-card" target="_blank" rel="noopener">
-      <span class="social-icon">💬</span>
-      <span class="social-name">WhatsApp</span>
-      <span class="social-handle">Pedidos</span>
-    </a>
+
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">La Tamalería 🫔</div>
+  <div class="footer-logo">Tamaleria "La abuela"🫔</div>
   <p class="footer-tagline">Tamales de masa de papa · Tradición artesanal</p>
   <div class="footer-links">
     <a href="#inicio">Inicio</a>
@@ -1007,7 +1099,7 @@
     <a href="#productos">Variedades</a>
     <a href="#pedidos">Pedidos</a>
   </div>
-  <p class="footer-copy">© 2025 La Tamalería · Hecho con ❤️ y masa de papa</p>
+  <p class="footer-copy">© 2026 Tamaleria "La abuela" · Hecho con ❤️ y masa de papa</p>
 </footer>
 
 <script>
