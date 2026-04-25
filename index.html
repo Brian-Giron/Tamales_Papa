@@ -658,6 +658,63 @@
     font-weight: 700;
   }
 
+
+  /* ----UBICACION---- */
+  #ubicacion {
+  background: var(--cream);
+  padding: 80px 20px;
+}
+
+.ubicacion-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+/* Info */
+.ubicacion-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.ubicacion-info h3 {
+  margin-top: 10px;
+  color: var(--deep-brown);
+}
+
+.ubicacion-info p {
+  color: var(--text-mid);
+  margin: 5px 0;
+}
+
+/* Botón */
+.btn-maps {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #c8832a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-maps:hover {
+  background: #a96d22;
+}
+
+/* Mapa */
+.ubicacion-mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
+}
+
   /* ---- REDES ---- */
   #redes { background: var(--deep-brown); text-align: center; }
   #redes .section-title { color: var(--cream); }
@@ -901,7 +958,6 @@
   </div>
 
   <div class="video-wrap fade-up" id="videoWrap">
-    <!-- Para agregar tu video de YouTube reemplaza "TU_VIDEO_ID" en la función de abajo -->
     <div class="video-placeholder" id="videoPlaceholder">
       <button class="video-play-btn" onclick="loadVideo()">
         <div class="play-triangle"></div>
@@ -909,9 +965,6 @@
       <p class="video-caption">Proceso artesanal — De la cocina a tu mesa</p>
     </div>
   </div>
-  <p class="video-instruction fade-up">
-    💡 Para agregar tu video: cambia <code>TU_VIDEO_ID</code> en el JavaScript con el ID de tu video de YouTube o Facebook
-  </p>
 </section>
 
 <!-- PRODUCTOS / VARIEDADES -->
@@ -1034,7 +1087,6 @@
       confirmaremos tu pedido y acordaremos la entrega. ¡Así de fácil!
     </p>
 
-    <!-- IMPORTANTE: Cambia el número de teléfono aquí -->
     <a href="https://wa.me/529622539101?text=Hola!%20Me%20interesa%20hacer%20un%20pedido%20de%20tamales%20🫔" 
        class="wa-btn" target="_blank" rel="noopener">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
@@ -1057,6 +1109,39 @@
         <span>Recibe tus tamales frescos y calientitos</span>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="ubicacion">
+  <div class="fade-up">
+    <p class="section-label">Ubicación</p>
+    <h2 class="section-title">Encuéntranos fácilmente</h2>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Estamos listos para atenderte con los mejores tamales. Visítanos o ubícanos en el mapa.
+    </p>
+  </div>
+
+  <div class="ubicacion-container fade-up">
+    
+    <!-- Info -->
+    <div class="ubicacion-info">
+      <h3>📍 Dirección</h3>
+      <p>Calle 39 Pte 5, Los Naranjos, de Febrero, 30710 Tapachula de Córdova y Ordóñez, Chis.</p>
+
+      <a href="https://www.google.com/maps?q=14.9267899,-92.2584217" target="_blank" class="btn-maps">
+        Ver en Google Maps
+      </a>
+    </div>
+
+    <!-- Mapa -->
+    <div class="ubicacion-mapa">
+      <iframe 
+        src="https://www.google.com/maps?q=14.9267899,-92.2584217&z=17&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
   </div>
 </section>
 
